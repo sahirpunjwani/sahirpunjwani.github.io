@@ -8,133 +8,149 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  
+  /* Custom Yellow & Black Palette Classes */
+  .cv-bg-dark { background-color: #1a1a1a !important; color: #ffffff !important; }
+  .cv-card-dark { background-color: #262626 !important; color: #ffffff !important; }
+  .cv-text-yellow { color: #ffcc00 !important; }
+  .cv-bg-yellow { background-color: #ffcc00 !important; color: #000000 !important; }
+  .cv-text-muted { color: #b3b3b3 !important; }
+  
+  /* Smooth horizontal divider adjustments */
+  hr { border-top: 1px solid #444444; }
 </style>
 </head>
-<body class="w3-light-grey">
+<body class="cv-bg-dark">
 
-<!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-  <!-- The Grid -->
   <div class="w3-row-padding">
   
-    <!-- Left Column -->
     <div class="w3-third">
     
-      <div class="w3-white w3-text-grey w3-card-4">
+      <div class="cv-card-dark w3-card-4">
         <div class="w3-display-container">
           <img src="unnamed.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Sahir Jimmy</h2>
+          <div class="w3-display-bottomleft w3-container w3-black w3-opacity-min" style="width:100%; padding: 8px 16px;">
+            <h2 class="cv-text-yellow" style="margin:0; font-weight:bold;">Sahir Jimmy</h2>
           </div>
         </div>
-        <div class="w3-container">
-          <p><i class="fa fas-code fa-fw w3-margin-right w3-large w3-text-teal"></i>Programmer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Bristol, UK</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>sahir.punjwani@gmail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>--</p>
+        <div class="w3-container w3-padding-16">
+          <p><i class="fa fa-code fa-fw w3-margin-right w3-large cv-text-yellow"></i>Programmer</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large cv-text-yellow"></i>Bristol, UK</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large cv-text-yellow"></i>sahir.punjwani@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large cv-text-yellow"></i>--</p>
           <hr>
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Time Managment</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right cv-text-yellow"></i>Skills</b></p>
+          
+          <p>Time Management</p>
+          <div class="w3-light-grey w3-round-xlarge w3-small" style="background-color:#444!important;">
+            <div class="w3-container w3-center w3-round-xlarge cv-bg-yellow" style="width:90%">90%</div>
           </div>
+          
           <p>Photography</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">
-              <div class="w3-center w3-text-white">50%</div>
+          <div class="w3-light-grey w3-round-xlarge w3-small" style="background-color:#444!important;">
+            <div class="w3-container w3-center w3-round-xlarge cv-bg-yellow" style="width:50%">
+              <div class="w3-center w3-text-black">50%</div>
             </div>
           </div>
+          
           <p>Runner</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:91.5%">91%</div>
+          <div class="w3-light-grey w3-round-xlarge w3-small" style="background-color:#444!important;">
+            <div class="w3-container w3-center w3-round-xlarge cv-bg-yellow" style="width:91.5%">91%</div>
           </div>
+          
           <p>Media</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:44.5%">45%</div>
+          <div class="w3-light-grey w3-round-xlarge w3-small" style="background-color:#444!important;">
+            <div class="w3-container w3-center w3-round-xlarge cv-bg-yellow" style="width:44.5%">45%</div>
           </div>
           <br>
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+          <p class="w3-large"><b><i class="fa fa-globe fa-fw w3-margin-right cv-text-yellow"></i>Languages</b></p>
           <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          <div class="w3-light-grey w3-round-xlarge" style="background-color:#444!important;">
+            <div class="w3-round-xlarge cv-bg-yellow" style="height:24px;width:100%"></div>
           </div>
           <p>Urdu</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+          <div class="w3-light-grey w3-round-xlarge" style="background-color:#444!important;">
+            <div class="w3-round-xlarge cv-bg-yellow" style="height:24px;width:100%"></div>
           </div>
         </div>
       </div><br>
 
-    <!-- End Left Column -->
     </div>
 
-    <!-- Right Column -->
     <div class="w3-twothird">
     
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+      <div class="w3-container w3-card cv-card-dark w3-margin-bottom">
+        <h2 class="cv-text-yellow w3-padding-16" style="border-bottom: 2px solid #ffcc00; font-weight:bold;">
+          <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge"></i>Work Experience
+        </h2>
+        
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Front End Developer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Frontent devoloping is my hobby and for other childrens I am making HTML and CSS for kids webpage!</p>
+          <h6 class="cv-text-yellow"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2018 - <span class="w3-tag cv-bg-yellow w3-round">Current</span></h6>
+          <p class="cv-text-muted">Frontent devoloping is my hobby and for other childrens I am making HTML and CSS for kids webpage!</p>
           <hr>
         </div>
+        
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Web Developer</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2019 - Dec 2021</h6>
-          <p>Web deloping i had started because I thoght to be a backend devoloper</p>
+          <h6 class="cv-text-yellow"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2019 - Dec 2021</h6>
+          <p class="cv-text-muted">Web deloping i had started because I thoght to be a backend devoloper</p>
           <hr>
         </div>
+        
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Runner</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>With my mental health I am also being to be fit and for that I am a fast runner also!</p><br>
+          <h6 class="cv-text-yellow"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017 - <span class="w3-tag cv-bg-yellow w3-round">Current</span></h6>
+          <p class="cv-text-muted">With my mental health I am also being to be fit and for that I am a fast runner also!</p><br>
         </div>
       </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+      <div class="w3-container w3-card cv-card-dark">
+        <h2 class="cv-text-yellow w3-padding-16" style="border-bottom: 2px solid #ffcc00; font-weight:bold;">
+          <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge"></i>Education &amp; Online Certificates
+        </h2>
+        
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Online</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-          <p>Web Development! All I need to know.</p>
+          <h6 class="cv-text-yellow"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
+          <p class="cv-text-muted">Web Development! All I need to know.</p>
           <hr>
         </div>
+        
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Udemy</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2023</h6>
-          <p>E-certificates</p>
+          <h6 class="cv-text-yellow"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2023</h6>
+          <p class="cv-text-muted">E-certificates</p>
           <hr>
         </div>
+        
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>DOing work on Github</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>All I am applying to!</p><br>
+          <h5 class="w3-opacity"><b>Doing work on Github</b></h5>
+          <h6 class="cv-text-yellow"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - <span class="w3-tag cv-bg-yellow w3-round">Current</span></h6>
+          <p class="cv-text-muted">All I am applying to!</p><br>
         </div>
       </div>
 
-    <!-- End Right Column -->
     </div>
     
-  <!-- End Grid -->
   </div>
   
-  <!-- End Page Container -->
-</div>
+  </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="portfolio.html" target="_blank">Portfolio</a></p>
+<footer class="w3-container w3-center w3-margin-top" style="background-color:#111111; padding:24px 16px;">
+  <p class="cv-text-yellow">Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-opacity cv-text-yellow" style="font-size:20px; margin:0 4px;"></i>
+  <i class="fa fa-instagram w3-hover-opacity cv-text-yellow" style="font-size:20px; margin:0 4px;"></i>
+  <i class="fa fa-snapchat w3-hover-opacity cv-text-yellow" style="font-size:20px; margin:0 4px;"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity cv-text-yellow" style="font-size:20px; margin:0 4px;"></i>
+  <i class="fa fa-twitter w3-hover-opacity cv-text-yellow" style="font-size:20px; margin:0 4px;"></i>
+  <i class="fa fa-linkedin w3-hover-opacity cv-text-yellow" style="font-size:20px; margin:0 4px;"></i>
+  <p class="w3-small cv-text-muted" style="margin-top:12px;">Powered by <a href="portfolio.html" target="_blank" class="cv-text-yellow">Portfolio</a></p>
 </footer>
 
 </body>
