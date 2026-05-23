@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title> Sahir Punjwani </title>
+  <title>Sahir Punjwani's Portfolio</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,7 +12,8 @@
     }
 
     body {
-      background: #f4f4f4;
+      background: #1a1a1a; /* Matching deep dark background */
+      color: #ffffff;
       display: flex;
       justify-content: center;
       padding: 40px;
@@ -24,38 +25,45 @@
       grid-template-rows: auto auto auto;
       gap: 20px;
       max-width: 800px;
-      background: white;
+      background: #262626; /* Sleek dark card containers */
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     }
 
     .box {
-      background: #fff;
+      background: #262626;
       padding: 20px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.05);
     }
 
     .header {
-      font-size: 48px;
+      font-size: 44px;
       font-weight: bold;
-      margin-bottom: 10px;
+      color: #ffcc00; /* Vibrant Yellow Accent */
+      line-height: 1.1;
+      margin-bottom: 12px;
     }
 
     .subtext {
       font-size: 18px;
-      color: #555;
+      color: #b3b3b3; /* Soft gray for readable secondary text */
     }
 
     .photo img {
       width: 100%;
       height: auto;
       border-radius: 10px;
+      border: 2px solid #ffcc00; /* Yellow highlight border for avatar */
     }
 
     .section-title {
       font-size: 22px;
       font-weight: bold;
+      color: #ffcc00;
       margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #ffcc00;
+      padding-bottom: 5px;
     }
 
     .projects {
@@ -66,50 +74,83 @@
 
     .project-item {
       text-align: center;
-      font-size: 14px;
+      font-size: 13px;
+      background: #1a1a1a;
+      padding: 10px;
+      border-radius: 6px;
+      border-left: 3px solid #ffcc00; /* Tech badge style border */
     }
 
     .project-item img {
       width: 100%;
       max-width: 100px;
+      height: auto;
       margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    .project-item div {
+      color: #ffffff;
+      font-weight: bold;
     }
 
     .about, .contact {
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
+
+    .about p {
+      margin-bottom: 10px;
     }
 
     .contact-item {
       margin-bottom: 10px;
     }
+    
+    .contact-item strong {
+      color: #ffcc00;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #444444;
+      margin: 15px 0;
+    }
 
     .footer {
       grid-column: span 2;
       text-align: center;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
-      padding: 10px;
-      background: #f1f1f1;
+      padding: 15px;
+      background: #111111;
+      color: #ffcc00;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-radius: 4px;
     }
 
   </style>
 </head>
 <body>
   <div class="container">
+    
     <div class="box">
       <div class="header">Sahir Punjwani</div>
-      <div class="subtext">I'm a Artist and Frontend Devoloper.</div>
+      <div class="subtext">Artist &amp; Frontend Developer</div>
     </div>
+    
     <div class="box photo">
       <img src="download1.png" alt="Profile Photo">
     </div>
+    
     <div class="box">
-      <div class="section-title">Acheivements</div>
+      <div class="section-title">Achievements</div>
       <div class="projects">
         <div class="project-item">
           <img src="Google Drive Ultimate.jpg" alt="Website">
-          <div>Google Drive Ultimate </div>
+          <div>Google Drive Ultimate</div>
         </div>
         <div class="project-item">
           <img src="Master Microsoft Powerpoint.png" alt="Mobile App">
@@ -129,7 +170,7 @@
         </div>
         <div class="project-item">
           <img src="Time Manegment Mastery.jpg" alt="Poster">
-          <div>Time Manegment Mastery</div>
+          <div>Time Management Mastery</div>
         </div>
         <div class="project-item">
           <img src="Gmail Productivity Ultimate Course.jpg" alt="Poster">
@@ -145,25 +186,29 @@
         </div>
       </div>
     </div>
+    
     <div class="box about">
-      <div class="section-title">ABOUT ME</div>
-      <p>I am a Frontend Developer with a passion for creating beautiful webpages.</p>
-      <p>I am also sprinter (not from passion) I like running!!</p>
-      <br><hr style="color:#f4f4f4;"><br>
-      <div class="contact-item">🎂 Jan 15, 2014  </div>
-      <div class="contact-item">🏫 Sultan Mahommed Shah Aga Khan School </div>
-      <div class="contact-item">🏫 Under-Matric </div>
+      <div class="section-title">About Me</div>
+      <p>Passionate frontend developer dedicated to creating accessible web development resources and beautiful user experiences.</p>
+      <p>Dedicated sprinter utilizing structured athletic training to maintain high personal discipline, mental clarity, and physical endurance.</p>
+      <hr>
+      <div class="contact-item">📅 <strong>Birthday:</strong> Jan 15, 2014</div>
+      <div class="contact-item">🏫 <strong>Education:</strong> Sultan Mahommed Shah Aga Khan School</div>
+      <div class="contact-item">🎓 <strong>Status:</strong> Under-Matric</div>
     </div>
+    
     <div class="box contact">
-      <div class="section-title">CONTACT</div>
+      <div class="section-title">Contact</div>
       <div class="contact-item">📧 sahir.punjwani@gmail.com</div>
-      <div class="contact-item">📞 --- </div>
+      <div class="contact-item">📞 ---</div>
       <div class="contact-item">🌐 www.sahirpunjwani.github.io</div>
-      <div class="contact-item">📍 Lisbon, Potugal</div>
+      <div class="contact-item">📍 Lisbon, Portugal</div>
     </div>
+    
     <div class="footer">
       Frontend Developer
     </div>
+    
   </div>
 </body>
 </html>
