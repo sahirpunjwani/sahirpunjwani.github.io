@@ -1,8 +1,0 @@
-======================================
-Future Updates
-======================================
-1. tryit-suite/Update the layout of the index.html and fix the tools [Expected Date 24/05/26]
-2. tryit-suite/fix the SQL tool [Expected Date max: 25/05/26]
-3.
-4.
-5.
