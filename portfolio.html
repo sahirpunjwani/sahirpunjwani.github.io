@@ -134,55 +134,42 @@
   </style>
 </head>
 <body>
-<button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
-
-<div class="sidebar" id="layout-sidebar">
-  <div class="sidebar-header">
-    <a href="index.html">⚡ TryIt <span>Suite</span></a>
+<body>
+  <div class="sidebar" id="layout-sidebar">
+    <div class="sidebar-header">
+      <a href="index.html">⚡ TryIt <span>Suite</span></a>
+      <button class="sidebar-close-btn" onclick="toggleSidebar()">&times;</button>
+    </div>
+    <div class="sidebar-menu">
+      <a href="index.html" class="sidebar-link">🏠 Home Dashboard</a>
+      <div class="menu-category">Compilers</div>
+      <a href="html-compiler.html" class="sidebar-link">🌐 HTML Compiler</a>
+      <a href="js-compiler.html" class="sidebar-link">🟨 JavaScript Engine</a>
+      <a href="python-compiler.html" class="sidebar-link">🐍 Python Workspace</a>
+      <a href="markdown-compiler.html" class="sidebar-link">📝 Markdown Parser</a>
+      <a href="c-compiler.html" class="sidebar-link"> C Compiler</a>
+      <a href="cpp-compiler.html" class="sidebar-link">💎 C++ Compiler</a>
+      <a href="java-compiler.html" class="sidebar-link">☕ Java Studio</a>
+      <div class="menu-category">Data & Security</div>
+      <a href="sql-sandbox.html" class="sidebar-link">🗄️ SQL Sandbox</a>
+      <a href="csv-converter.html" class="sidebar-link">📊 CSV Converter</a>
+      <a href="json-viewer.html" class="sidebar-link">🔍 JSON Viewer</a>
+      <a href="jwt-debugger.html" class="sidebar-link">🔑 JWT Debugger</a>
+      <a href="token-generater.html" class="sidebar-link">🎲 Token Generator</a>
+      <a href="url-handler.html" class="sidebar-link">🔗 URL Handler</a>
+    </div>
   </div>
-  <div class="sidebar-menu">
-    <a href="index.html" class="sidebar-link" data-page="index.html">🏠 Home Dashboard</a>
 
-    <div class="menu-category">Compilers</div>
-    <a href="html-compiler.html" class="sidebar-link" data-page="html-compiler.html">🌐 HTML Compiler</a>
-    <a href="js-compiler.html" class="sidebar-link" data-page="js-compiler.html">🟨 JavaScript Engine</a>
-    <a href="python-compiler.html" class="sidebar-link" data-page="python-compiler.html">🐍 Python Workspace</a>
-    <a href="markdown-compiler.html" class="sidebar-link" data-page="markdown-compiler.html">📝 Markdown Parser</a>
-    <a href="c-compiler.html" class="sidebar-link" data-page="c-compiler.html">🎛️ C Compiler</a>
-    <a href="cpp-compiler.html" class="sidebar-link" data-page="cpp-compiler.html">💎 C++ Compiler</a>
-    <a href="java-compiler.html" class="sidebar-link" data-page="java-compiler.html">☕ Java Studio</a>
-
-    <div class="menu-category">Data & Security</div>
-    <a href="sql-sandbox.html" class="sidebar-link" data-page="sql-sandbox.html">𗄞 SQL Sandbox</a>
-    <a href="csv-converter.html" class="sidebar-link" data-page="csv-converter.html">📊 CSV Converter</a>
-    <a href="json-viewer.html" class="sidebar-link" data-page="json-viewer.html">🔍 JSON Viewer</a>
-    <a href="jwt-debugger.html" class="sidebar-link" data-page="jwt-debugger.html">🔑 JWT Debugger</a>
-    <a href="token-generater.html" class="sidebar-link" data-page="token-generater.html">🎲 Token Generator</a>
-    <a href="url-handler.html" class="sidebar-link" data-page="url-handler.html">🔗 URL Handler</a>
-
-    <div class="menu-category">Design & Text</div>
-    <a href="animation-studio.html" class="sidebar-link" data-page="animation-studio.html">🎬 Animation Studio</a>
-    <a href="box-model.html" class="sidebar-link" data-page="box-model.html">📦 Box Model</a>
-    <a href="color-sandbox.html" class="sidebar-link" data-page="color-sandbox.html">🎨 Color Sandbox</a>
-    <a href="diff-checker.html" class="sidebar-link" data-page="diff-checker.html">⚖️ Diff Checker</a>
-    <a href="regex-tester.html" class="sidebar-link" data-page="regex-tester.html">⚙️ RegEx Tester</a>
-  </div>
-</div>
-
-<script>
-  // Automatically toggle open/close classes
-  function toggleSidebar() {
-    document.getElementById('layout-sidebar').classList.toggle('open');
-  }
-
-  // Smart Auto-Highlighting Script matching current active filename strings
-  const currentFileName = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll('.sidebar-link').forEach(link => {
-    if (link.getAttribute('data-page') === currentFileName) {
-      link.classList.add('active');
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('layout-sidebar');
+      const mainContent = document.querySelector('.main-content');
+      sidebar.classList.toggle('open');
+      if (mainContent) {
+        mainContent.classList.toggle('shifted');
+      }
     }
-  });
-</script>
+  </script>
   <div class="container">
     
     <div class="box">
