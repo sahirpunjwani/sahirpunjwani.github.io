@@ -139,7 +139,7 @@ body {
 
 .hero-description {
   font-size: 1.1rem;
-  color: rgb(25, 25, 54);
+  color: black;
   max-width: 600px;
   line-height: 1.6;
   margin-bottom: 40px;
@@ -302,7 +302,7 @@ body {
 .ui-corner-br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
 
 .about-content p {
-  color: var(--text-muted);
+  color: black;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 35px;
