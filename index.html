@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber-Minimalist Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="glow-orb"></div>
+
+  <header class="navbar">
+    <div class="nav-logo">SYS.<span>EXE</span></div>
+    <nav class="nav-links">
+      <a href="#hero">01 // HOME</a>
+      <a href="#work">02 // WORK</a>
+      <a href="#about">03 // INTEL</a>
+    </nav>
+    <a href="#contact" class="floating-cta">CONNECT</a>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-text-wrapper container animate-fade">
+      <div class="tiny-label"><i class="fa-solid fa-microchip"></i> VERSION 2.6 // ONLINE</div>
+      <h2 class="heavy-subtitle">CREATIVE</h2>
+      <h1 class="heavy-title">SOFTWARE ENGINEER</h1>
+      <p class="hero-description">Building high-performance digital environments. Merging heavy typography with advanced frontend logic and premium interface aesthetics.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn-primary">EXPLORE WORK <i class="fa-solid fa-arrow-right-long"></i></a>
+        <div class="scroll-tag">SCROLL_DOWN //</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="work-section container">
+    <div class="section-header animate-fade">
+      <h2 class="section-title">SELECTED WORK</h2>
+      <span class="thin-line"></span>
+    </div>
+    
+    <div class="project-grid">
+      <div class="project-card animate-fade">
+        <div class="card-image-placeholder">
+          <i class="fa-solid fa-terminal card-icon"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-tag">WEB3 // CORE</div>
+          <h3>NITROGEN ENGINE</h3>
+          <p>A web-based compiler environment optimizing asynchronous multi-threading modules.</p>
+        </div>
+      </div>
+
+      <div class="project-card animate-fade">
+        <div class="card-image-placeholder">
+          <i class="fa-solid fa-bezier-curve card-icon"></i>
+        </div>
+        <div class="card-content">
+          <div class="card-tag">UI/UX // ARCHITECTURE</div>
+          <h3>DESIGN THOUGHTS</h3>
+          <p>Premium dark-mode components configured with mathematical asymmetry layout structures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section container">
+    <div class="about-layout">
+      
+      <div class="portrait-wrapper animate-fade">
+        <div class="orange-bg-layer">
+          <i class="fa-solid fa-user-astronaut portrait-placeholder"></i>
+        </div>
+        <div class="ui-corner-tl"></div>
+        <div class="ui-corner-br"></div>
+      </div>
+
+      <div class="about-content animate-fade">
+        <div class="tiny-label">CRITICAL LOGS // INFRASTRUCTURE</div>
+        <h2 class="section-title">THE PROFILE</h2>
+        <p>Operating at the intersection of structural engineering and radical visual designs. I maximize digital experiences through stark minimalism, glassmorphism depth panels, and raw layout contrasts.</p>
+        
+        <div class="tech-stack">
+          <span class="stack-badge">HTML5</span>
+          <span class="stack-badge">CSS3 // SCSS</span>
+          <span class="stack-badge">JS // ES6</span>
+          <span class="stack-badge">REACT</span>
+          <span class="stack-badge">NODE.JS</span>
+          <span class="stack-badge">GIT</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact" class="footer-section container">
+    <span class="thin-line"></span>
+    <div class="footer-grid">
+      <div>
+        <h2 class="heavy-subtitle text-orange">GET IN TOUCH</h2>
+        <p class="brand-tagline">System ready for deployment integrations.</p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-item"><i class="fa-brands fa-github"></i> GITHUB</a>
+        <a href="#" class="social-item"><i class="fa-brands fa-linkedin-in"></i> LINKEDIN</a>
+        <a href="#" class="social-item"><i class="fa-brands fa-x-twitter"></i> TWITTER</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 TRYIT SUITE PORFOLIO. ALL RIGHT RECEIVED [SECURE_CONNECTION]</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.animate-fade').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
