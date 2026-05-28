@@ -22,20 +22,6 @@ body {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
   position: relative;
-   /* 1. Link your background image here */
-  background-image: url('image.png'); 
-
-  /* 2. Freeze the background so it doesn't scroll with the page */
-  background-attachment: fixed; 
-
-  /* 3. Scale it to perfectly cover the entire screen area */
-  background-size: cover; 
-  
-  /* 4. Keep the image centered perfectly */
-  background-position: center center; 
-  background-repeat: no-repeat;
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
