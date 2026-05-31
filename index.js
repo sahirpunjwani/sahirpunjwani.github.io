@@ -21,6 +21,12 @@ const CONFIG = {
 (function initMatrix() {
   const canvas = document.getElementById("matrix-canvas");
   const ctx = canvas.getContext("2d");
+  // Detect low-end device
+if (navigator.hardwareConcurrency <= 2 || 
+    window.innerWidth < 400) {
+  canvas.style.display = "none";
+  return;
+}
   const chars = "アイウエオカキクケコサシスセソタチツテトナニヌネノ01アイウエオ{}[]<>/\\|#$%&*";
   let cols, drops;
 
