@@ -4,7 +4,7 @@
 
 // ── CONFIG ────────────────────────────────────
 const CONFIG = {
-  username: "YOUR_USERNAME",          // ← Replace with your GitHub username
+  username: "sahirpunjwani",          // ← Replace with your GitHub username
   tagline_phrases: [
     "building things that matter.",
     "open source enthusiast.",
