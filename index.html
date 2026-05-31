@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOUR_USERNAME — Projects</title>
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Matrix rain canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <header id="header">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">visitor@YOUR_USERNAME:~</span>
+      </div>
+      <div class="hero">
+        <p class="prompt"><span class="green-text">➜</span> <span class="blue-text">~</span> whoami</p>
+        <h1 class="glitch" data-text="YOUR_USERNAME">YOUR_USERNAME</h1>
+        <p class="tagline" id="typed-tagline"></p>
+        <div class="status-line">
+          <span class="blink">█</span>
+          <span id="status-text">SYSTEM ONLINE</span>
+          <span class="sep">|</span>
+          <span id="project-count">0 REPOS LOADED</span>
+          <span class="sep">|</span>
+          <span id="live-time"></span>
+        </div>
+        <div class="header-links">
+          <a href="https://github.com/YOUR_USERNAME" target="_blank" class="btn-terminal">
+            <span class="btn-prefix">$</span> github.com/YOUR_USERNAME
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- FILTER BAR -->
+    <section class="filter-bar" id="filter-bar">
+      <span class="prompt-inline"><span class="green-text">➜</span> filter --tag</span>
+      <div class="tags" id="tag-filters">
+        <button class="tag active" data-tag="all">all</button>
+      </div>
+    </section>
+
+    <!-- PROJECTS GRID -->
+    <main>
+      <div class="section-header">
+        <span class="green-text">// </span>ls -la ./projects
+      </div>
+      <div class="grid" id="projects-grid">
+        <!-- Populated by JS -->
+      </div>
+    </main>
+
+    <!-- ALL PROJECTS LINKS DIRECTORY -->
+    <section class="links-section">
+      <hr class="section-hr" />
+      <div class="links-header">
+        <span class="green-text">// </span>cat ./all-projects.txt
+        <span class="links-count" id="links-count"></span>
+      </div>
+      <div class="links-list" id="links-list">
+        <!-- Populated by JS -->
+      </div>
+      <hr class="section-hr" />
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p><span class="green-text">➜</span> echo "Built with <span class="red-text">♥</span> and GitHub Pages" && exit 0</p>
+      <p class="dim">© <span id="year"></span> YOUR_USERNAME — MIT License</p>
+    </footer>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
