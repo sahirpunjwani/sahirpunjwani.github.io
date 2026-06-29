@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Core Booting...</title>
+    <style>
+        :root {
+            --neon-blue: #00d9ff;
+            --deep-blue: #0044ff;
+            --dark-bg: #020208;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* Tech grid background with blue overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                linear-gradient(rgba(0, 217, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 217, 255, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center;
+            transform: perspective(600px) rotateX(60deg);
+            animation: gridMove 15s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(600px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(600px) rotateX(60deg) translateY(40px); }
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 68, 255, 0.15) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .loader-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        /* Futuristic Blue Glowing Ring */
+        .neon-ring {
+            position: relative;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: transparent;
+            border: 3px solid rgba(0, 217, 255, 0.05);
+            filter: drop-shadow(0 0 15px var(--deep-blue));
+        }
+
+        .neon-ring::before, .neon-ring::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid transparent;
+        }
+
+        .neon-ring::before {
+            top: -4px; left: -4px; right: -4px; bottom: -4px;
+            border-top-color: var(--neon-blue);
+            border-bottom-color: var(--deep-blue);
+            animation: spin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        .neon-ring::after {
+            top: 8px; left: 8px; right: 8px; bottom: 8px;
+            border-left-color: #ffffff;
+            border-right-color: var(--neon-blue);
+            opacity: 0.6;
+            animation: spinReverse 2.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes spinReverse {
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .loading-text {
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-size: 1rem;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px var(--neon-blue),
+                0 0 30px var(--deep-blue);
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Progress Bar wrapper */
+        .progress-box {
+            width: 280px;
+            height: 8px; /* Slightly thicker for visibility */
+            background: rgba(0, 68, 255, 0.15);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 68, 255, 0.3);
+            border-radius: 4px;
+            overflow: hidden; /* Ensures bar doesn't bleed out of borders */
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%; /* Starts at 0 */
+            background: linear-gradient(90deg, var(--deep-blue), var(--neon-blue));
+            box-shadow: 0 0 12px var(--neon-blue);
+            /* Removed the slow CSS transition so JavaScript controls it instantly */
+        }
+
+        .percentage {
+            font-size: 0.85rem;
+            color: var(--neon-blue);
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px var(--deep-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-container">
+        <div class="neon-ring"></div>
+        <div class="loading-text">LOADING PROTOCOL</div>
+        <div class="progress-box">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+        <div class="percentage" id="percent-text">00%</div>
+    </div>
+
+    <script>
+        const progressBar = document.getElementById('progress');
+        const percentText = document.getElementById('percent-text');
+        
+        let width = 0;
+        const loadingInterval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(loadingInterval);
+                window.location.href = "index2.html"; 
+            } else {
+                width++;
+                // Explicitly setting width via template literal strings to bypass browser lag
+                progressBar.style.width = `${width}%`;
+                percentText.textContent = width < 10 ? `0${width}%` : `${width}%`;
+            }
+        }, 35); 
+    </script>
+</body>
+</html>
